@@ -1,36 +1,30 @@
 "use client";
 
 export default function MainShowcase() {
+  const clipPathStyle = {
+    clipPath: `
+      polygon(
+        0% 0%, 14% 0%, 28% 0%, 42% 0%, 
+        42% 12%, 70% 12%, 70% 0%, 100% 0%, 
+        100% 60%, 40% 60%, 40% 100%, 42% 100%, 
+        42% 100%, 0% 100%
+      )
+    `
+  };
+
   return (
     <div
-      className="
-        absolute
-        w-full h-full
-        bg-black rounded-3xl shadow-lg overflow-hidden
-        border border-black/20
-      "
-      style={{
-        clipPath: `
-          polygon(
-            0% 0%,        /* esquina superior izquierda */
-            70% 0%,       /* hasta columna 3 */
-            85% 0%,       /* pequeño salto (V,V) */
-            100% 0%,      /* extremo derecho */
-
-            100% 55%,     /* baja hasta antes de mordida */
-
-            70% 55%,      /* inicio mordida abajo derecha */
-            70% 100%,     /* baja completamente */
-            0% 100%,      /* esquina inferior izquierda */
-            0% 0%         /* cerrar polígono */
-          )
-        `
-      }}
+      className="z-11 absolute w-full h-full bg-black shadow-lg overflow-hidden border border-black/20"
+      style={clipPathStyle}
     >
-      <img
-        src="/your-image.jpg"
-        className="w-full h-full object-cover"
-      />
+      {/* Contenedor interno con bordes redondeados */}
+      <div className="w-full h-full rounded-3xl overflow-hidden">
+        <img
+          src="/your-image.jpg"
+          alt="Showcase"
+          className="w-full h-full object-cover"
+        />
+      </div>
     </div>
   );
 }
