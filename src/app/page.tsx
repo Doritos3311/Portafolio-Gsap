@@ -7,7 +7,7 @@ import Landing from "@/modules/Landing/app/page";
 export default function Home() {
   const [isLoading, setIsLoading] = useState(true);
 
-  const handleLoadingComplete = () => {
+  const handleLoadingComplete = () => { 
     setIsLoading(false);
   };
 

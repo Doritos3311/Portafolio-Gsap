@@ -1,29 +1,29 @@
 "use client";
 
 export default function MainShowcase() {
-  const clipPathStyle = {
-    clipPath: `
-      polygon(
-        0% 0%, 14% 0%, 28% 0%, 42% 0%, 
-        42% 12%, 70% 12%, 70% 0%, 100% 0%, 
-        100% 60%, 40% 60%, 40% 100%, 42% 100%, 
-        42% 100%, 0% 100%
-      )
-    `
-  };
-
   return (
-    <div
-      className="z-11 absolute w-full h-full bg-black shadow-lg overflow-hidden border border-black/20"
-      style={clipPathStyle}
-    >
-      {/* Contenedor interno con bordes redondeados */}
-      <div className="w-full h-full rounded-3xl overflow-hidden">
-        <img
-          src="/your-image.jpg"
-          alt="Showcase"
-          className="w-full h-full object-cover"
-        />
+    <div className="relative w-full h-screen flex items-center justify-center">
+      <div
+        className=""
+      >
+        {/* Imagen de fondo */}
+
+        {/* SVG como máscara transparente */}
+        <svg
+          width="100%"
+          height="100%"
+          viewBox="0 0 3508 2481"
+          className="absolute inset-0 pointer-events-none"
+          style={{ fillRule: 'evenodd', clipRule: 'evenodd', strokeLinejoin: 'round', strokeMiterlimit: 2 }}
+        >
+          <defs>
+            <filter id="shadow" x="-50%" y="-50%" width="200%" height="200%">
+              <feDropShadow dx="4" dy="8" stdDeviation="12" floodColor="black" floodOpacity="0.3" />
+            </filter>
+          </defs>
+          {/* Path transparente - solo define la forma */}
+          <path d="M1271.353,374.816c0.102,-114.987 93.346,-208.149 208.333,-208.149c643.72,0 2597.553,0 3241.523,0c115.059,0 208.333,93.274 208.333,208.333c-0,69.867 -0,147.714 -0,217.441c-0,114.345 92.162,207.32 206.502,208.325c318.706,2.801 927.096,8.149 1248.005,10.969c55.569,0.488 109.029,-21.244 148.496,-60.365c39.467,-39.121 61.668,-92.389 61.668,-147.96c0,-73.231 0,-155.329 -0,-228.411c0,-115.059 93.274,-208.333 208.333,-208.333c228.71,0 593.743,0 822.453,0c115.059,0 208.333,93.274 208.333,208.333c0,523.931 0,1891.85 0,2415.781c-0,115.059 -93.274,208.333 -208.333,208.333c-712.319,-0 -3045.993,-0 -3758.311,-0c-55.253,0 -108.244,21.949 -147.314,61.019c-39.07,39.07 -61.019,92.06 -61.019,147.314c-0,250.197 -0,667.355 -0,917.552c0,55.253 -21.949,108.244 -61.019,147.314c-39.07,39.07 -92.06,61.019 -147.314,61.019c-452.534,-0 -1520.949,-0 -1973.65,-0c-55.285,0 -108.304,-21.975 -147.379,-61.085c-39.075,-39.11 -61.003,-92.148 -60.954,-147.433c0.629,-711.532 2.686,-3039.026 3.314,-3750Z" />
+        </svg>
       </div>
     </div>
   );

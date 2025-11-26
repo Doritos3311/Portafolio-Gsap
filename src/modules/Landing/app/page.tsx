@@ -1,29 +1,16 @@
-"use client";
+'use client';
 
-import HeaderBar from "@/modules/Landing/components/Hero/HeaderBar";
-import MainShowcase from "@/modules/Landing/components/Hero/MainShowcase";
-import BottomCard from "@/modules/Landing/components/Hero/BottomCard";
-import GridBackground from "@/modules/Landing/components/Hero/GridBackground";
+import React from 'react';
+import Background from '@/modules/Landing/components/Hero/Background';
+import Content from '@/modules/Landing/components/Hero/Content';
 
-export default function Page() {
+const PortfolioPage: React.FC = () => {
   return (
-    <div className="w-full min-h-full pl-25">
-
-      <GridBackground />
-
-      <HeaderBar />
-
-      <div className="flex flex-col gap-6 h-full">
-
-        {/* CONTENEDOR CENTRAL — Imagen grande */}
-        <MainShowcase />
-
-        {/* TARJETA INFERIOR DERECHA */}
-        <div className="flex justify-end">
-          <BottomCard />
-        </div>
-
-      </div>
+    <div className="min-h-screen relative overflow-hidden">
+      <Background />
+      <Content />
     </div>
   );
-}
+};
+
+export default PortfolioPage;

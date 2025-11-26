@@ -11,7 +11,7 @@ interface LoadingScreenProps {
 // ⚙️ CONFIGURACIÓN SIMPLIFICADA Y EFECTIVA
 const CONFIG = {
   // Grid flexible que se adapta al tamaño de pantalla
-  BASE_COLS: 7,
+  BASE_COLS: 8,
   BASE_ROWS: 3,
 
   // Animación
@@ -48,9 +48,9 @@ const LoadingScreen: React.FC<LoadingScreenProps> = ({ onLoadingComplete }) => {
 
     let rows = CONFIG.BASE_ROWS;
     if (screenHeight < 600) {
-      rows = 2;
+      rows = 3;
     } else if (screenHeight > 1200) {
-      rows = 4;
+      rows = 5;
     }
 
     return { cols, rows, total: cols * rows };
